@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block main %}
+<div class="container">
+
+	<div id="welcome" class="header col-md-12">
+		<h1 class="text-center">Flack</h1>
+		<h5 class="text-center">Keep talking!</h5>
+		<form id="uname_form" class="col-md-4 offset-md-8">
+			<div class="form-group">
+				<input type="text" name="name" id="uname" required placeholder="Enter Your Prefered Display Name"
+					class="form-control">
+			</div>
+			<button id="uname_btn" type="submit" class="btn disp_btn">Submit</button>
+		</form>
+	</div>
+
+	<div class="content">
+		<form id="create_channel">
+			<input type="text" id="channel" name="channel" placeholder=" Create a channel" required
+				class="form-control">
+			<button id="create_btn" type="submit" class="btn btn_bg">Create</button>
+		</form>
+
+		<div id="channel_list">
+			<h1 class="text-center">Channels</h1>
+			<ul id="change_channel">
+				{% for my_channel in channels %}
+				<li class="my_channel" data-channel="{{my_channel}}">{{ my_channel }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+	
+		<button type="submit" id="leave_channel" class="btn exit_channel btn_bg">Leave channel</button>
+
+		<div id="chat_msg">
+			<h1 id="chat_title"></h1>
+			<ul id="messages">
+			</ul>
+
+			<form class="col-md-12">
+				<div class="form-group">
+					<input type="text" id="my_message" class="form-control msg" required autofocus>
+					<button id="sendbutton" class="btn send_btn file btn_bg">Send</button>
+				</div>
+
+				<div class="form-group float-left file">
+					<span>Share file:</span>
+					<input type="file" id="file_input" class="btn_bg">
+				</div>
+
+			</form>
+
+
+		</div>
+		
+	</div>
+
+	<div id="users">
+		<h4 class="text-center">Users</h4>
+		<ul>
+			{% for user in users %}
+			<li class="my_user" data-user="{{ user }}" data-channel="{{ users[user] }}">{{ user }}</li>
+			{% endfor %}
+		</ul>
+
+	</div>
+
+
+
+</div>
+
+
+{% endblock %}

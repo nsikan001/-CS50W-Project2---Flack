@@ -1,0 +1,178 @@
+
+body {
+	background-color:rgb(240, 240, 240);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+	right: 0;
+	z-index: 10;
+    background-color: #2e8b57;
+    color: #fff;
+}
+
+
+#chat_msg {
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	width: auto;
+	max-width: 100%;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 300px;
+	padding: 10px;
+	left: 140px;
+	top:-100px;
+	min-width: 50%;
+	min-height: 100px;
+	border-radius: 10px;
+}
+#chat_msg h1 {
+	text-align: center;
+}
+
+#channel_list {
+	position: fixed;
+	flex-direction: column;
+	min-width: 190px;
+	margin-right: 100px;
+	width: 200px;
+	border: 1px solid #2e8b57;
+	padding: 10px;
+	left: 15px;
+	top:250px;
+	z-index: 20;
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+
+#create_channel {
+	display: inline-flex;
+	position: fixed;
+	top:190px;
+	left: 4px;
+	z-index: 30;
+}
+
+#channel {
+	padding-right: 10px;
+}
+
+#channel_list h1 {
+	font-size: 1.5em;
+	left: -50px;
+}
+
+ul {
+	list-style: none;
+}
+
+#channel_list ul, #users ul {
+	width: 100%;
+	margin-left: -20px;
+}
+
+#users{
+	position: fixed;
+	flex-direction: column;
+	min-width: 190px;
+	margin-left: 100px;
+	width: 200px;
+	border: 1px solid #2e8b57;
+	padding: 10px;
+	right: 15px;
+	top:220px;
+	z-index: 20;
+	max-height: 350px;
+	overflow-y: scroll;
+}
+
+#channel_list li, #users li {
+	border: 1px solid #2e8b57;
+	width: 100%;
+	padding: 5px;
+	background-color: white;
+}
+
+#channel_list li:hover, #users li:hover {
+	background-color: #2e8b57;
+	color: white;
+}
+
+#messages{
+	max-height: 200px;
+	overflow-y: scroll;
+}
+#messages div {
+	position: relative;
+	border-radius: 5px;
+	display: block;
+	padding: 5px;
+	margin-left: 30px;
+	height: auto;
+}
+
+#messages small{
+	margin-left: 30px;
+}
+
+#messages div span {
+	background-color: #2e8b57;
+	color: #fff;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+
+#chat_title{
+	border-bottom: 1px solid #2e8b57;
+}
+
+#send_file{
+	position: fixed;
+	top: 400px;
+	right: 0;
+	z-index: 60;
+}
+
+.file{
+	margin-top: 10px;
+}
+
+
+.msg{
+	float:left;
+}
+
+.send_btn{
+	float: right;
+}
+
+.exit_channel{
+	position: fixed;
+	left: 20px;
+	top:550px;
+	z-index: 40;
+}
+
+.btn_bg{
+	background-color: #2e8b57;
+	color: #fff;
+}
+
+.btn_bg:hover{
+	color: #2e8b57;
+	background-color: #fff;
+	border: 1px solid #2e8b57;
+}
+
+.disp_btn{
+	color: #2e8b57;
+	background-color: #fff;
+	border: 1px solid #2e8b57;
+}
